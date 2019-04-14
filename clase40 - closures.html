@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>clase40 - closures</title>
+</head>
+<body>
+  <script>
+    function crearSaludo(finalDeFrase) {
+      return function(nombre) {
+        console.log(`Hola ${nombre} ${finalDeFrase}`)
+      }
+    }
+
+    const saludoVenezolano = crearSaludo('pana')
+    const saludoMexicano = crearSaludo('wey')
+    const saludoColombiano = crearSaludo('parce')
+
+    saludoVenezolano('jose') //hola jose pana
+    saludoMexicano('jose')  //hola jose wey
+    saludoColombiano('jose')  //hola jose parse
+  </script>
+</body>
+</html>
